@@ -11,7 +11,7 @@ const app = express();
 const port = 4000
 connectDB(); 
 
-const allowedOrigins = ['http://localhost:5173'] // React app URL
+const allowedOrigins = ['https://auth-app-2ca3.onrender.com'] // React app URL
 
 app.use(express.json());
 app.use(cors({origin:allowedOrigins, credentials: true}));
