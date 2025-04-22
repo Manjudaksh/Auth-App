@@ -44,11 +44,8 @@ export const register = async (req, res) => {
     };
 
     // await transporter.sendMail(mailOptions);
-    console.log('SMTP User:', process.env.SMTP_USER)
-    console.log('SMTP Pass:', process.env.SMTP_PASS)
     try {
       await transporter.sendMail(mailOptions);
-      console.log("Welcome email sent to:", email);
     } catch (err) {
       console.error("Error sending welcome email:", err);
     }
