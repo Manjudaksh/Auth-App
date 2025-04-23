@@ -48,7 +48,7 @@ const EmailVerify = () => {
         getUserData()
         navigate("/")
       } else{
-        toast.error(data.message)
+        toast.error('failed to verify OTP1')
       }
     } catch (error) {
       toast.error('Failed to verify OTP')

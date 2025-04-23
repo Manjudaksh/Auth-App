@@ -19,7 +19,7 @@ const Navbar = () => {
           toast.success(data.message)
           navigate("/email-verify")
         } else{
-          toast.error(data.message) 
+          toast.error('failed to send verification email1') 
           console.log(data)
         }
       } catch (error) {
