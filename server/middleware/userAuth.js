@@ -21,6 +21,7 @@ const userAuth = (req, res, next) => {
 
         next();
     } catch (error) {
+        console.error("Error in user authentication:", error);
         return res.json({success: false, message: error.message});
         
     }

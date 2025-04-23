@@ -16,6 +16,7 @@ export const getUserData = async (req, res) => {
             }
         })
     } catch (error) {
+        console.error("Error in getting user data:", error);
         return res.json({success: false, message: error.message});
         
     }

@@ -52,6 +52,7 @@ export const register = async (req, res) => {
 
     return res.json({ success: true, message: "User Created Successfully" });
   } catch (error) {
+    console.error("Error in registration:", error);
     return res.json({ success: false, message: error.message });
   }
 };
@@ -96,6 +97,7 @@ export const login = async (req, res) => {
 
     return res.json({ success: true, message: "User Login Successfully" });
   } catch (error) {
+    console.error("Error in login:", error);
     return res.json({ success: false, message: error.message });
   }
 };
@@ -110,6 +112,7 @@ export const logout = async (req, res) => {
 
     return res.json({ success: true, message: "User Logout Successfully" });
   } catch (error) {
+    console.error("Error in logout:", error);
     return res.json({ success: false, message: error.message });
   }
 };
@@ -147,6 +150,7 @@ export const sendVerifyOtp = async (req, res) => {
 
         res.json({success: true, message: "Verification OTP Sent on Email"}) 
     } catch(error){
+      console.error("Error in sending verification OTP:", error);
         return res.json({success: false, message: error.message})
     }
 }
@@ -184,6 +188,7 @@ export const verifyEmail = async (req, res) => {
         return res.json({success: true, message: "Email Verified Successfully"});
 
     } catch (error) {
+        console.error("Error in verifying email:", error);
         res.json({success: false, message: error.message})
     }
 }
@@ -232,6 +237,7 @@ export const sendResetOtp = async (req, res) => {
 
     
   } catch (error) {
+    console.error("Error in sending password reset OTP:", error);
     return res.json({ success: false, message: error.message });  
     
   }
@@ -271,6 +277,7 @@ export const resetPassword = async (req, res) => {
     return res.json({success: true, message: "Password Reset Successfully"})  
     
   } catch (error) {
+    console.error("Error in resetting password:", error);
     return res.json({success: false, message: error.message})
     
   }
