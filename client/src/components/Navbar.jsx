@@ -23,7 +23,7 @@ const Navbar = () => {
           console.log(data)
         }
       } catch (error) {
-        toast.error(error.message)
+        toast.error('Failed to send verification email')
         console.log(error)
       }
     }
@@ -36,7 +36,7 @@ const Navbar = () => {
         data.success && setUserData(false)  
         navigate("/")
       } catch (error) {
-        toast.error(error.message)
+        toast.error('Logout failed')
         console.log(error)
       }
     }

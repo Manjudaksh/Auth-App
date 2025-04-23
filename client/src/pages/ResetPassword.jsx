@@ -50,7 +50,7 @@ const ResetPassword = () => {
       data.success ? toast.success(data.message) : toast.error(data.message)
       data.success && setIsEmailSent(true)
     } catch (error) {
-      toast.error(error.message);
+      toast.error('Failed to send OTP');
       console.log(error)
     }
   }

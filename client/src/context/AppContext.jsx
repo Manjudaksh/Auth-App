@@ -18,7 +18,7 @@ export const AppContextProvider = (props) => {
             const  {data} = await axios.get('https://auth-app-backend-8aee.onrender.com' + "/api/user/data")
             data.success ? setUserData(data.userData) : toast.error(data.message)
         } catch (error) {
-            toast.error(error.message)
+            toast.error('Failed to fetch user data')
             console.log(error)
         }
     }
@@ -35,7 +35,7 @@ export const AppContextProvider = (props) => {
                 getUserData()
             }
         } catch (error) {
-            toast.error(error.message)
+            toast.error('Failed to authenticate')
             console.log(error)
         }
     }

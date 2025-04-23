@@ -28,7 +28,7 @@ const Login = () => {
           navigate("/")
           toast.success(data.message)
         }else{
-          toast.error(data.message)
+          toast.error('failed to register')
           console.log(data)
         }
 
@@ -40,13 +40,13 @@ const Login = () => {
           navigate("/")
           toast.success(data.message)
         }else{
-          toast.error(data.message)
+          toast.error('failed to login')
           console.log(data)
         }
       }
     
     } catch (error) {
-      toast.error(error.message)
+      toast.error('Failed to authenticate')
       console.log(error)
       }
 
