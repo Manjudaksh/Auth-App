@@ -20,9 +20,11 @@ const Navbar = () => {
           navigate("/email-verify")
         } else{
           toast.error(data.message) 
+          console.log(data)
         }
       } catch (error) {
         toast.error(error.message)
+        console.log(error)
       }
     }
 
@@ -35,6 +37,7 @@ const Navbar = () => {
         navigate("/")
       } catch (error) {
         toast.error(error.message)
+        console.log(error)
       }
     }
   return (

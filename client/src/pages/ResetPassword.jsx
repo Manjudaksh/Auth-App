@@ -51,6 +51,7 @@ const ResetPassword = () => {
       data.success && setIsEmailSent(true)
     } catch (error) {
       toast.error(error.message);
+      console.log(error)
     }
   }
 
@@ -69,6 +70,7 @@ const ResetPassword = () => {
       data.success && navigate("/login")
     } catch (error) {
       toast.error(error.message);
+      console.log(error)
     }
   }
   return (

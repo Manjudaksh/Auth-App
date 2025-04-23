@@ -29,6 +29,7 @@ const Login = () => {
           toast.success(data.message)
         }else{
           toast.error(data.message)
+          console.log(data)
         }
 
       }else{
@@ -40,12 +41,14 @@ const Login = () => {
           toast.success(data.message)
         }else{
           toast.error(data.message)
+          console.log(data)
         }
       }
     
     } catch (error) {
       toast.error(error.message)
-    }
+      console.log(error)
+      }
 
 
   }
