@@ -21,7 +21,7 @@ const Login = () => {
       axios.defaults.withCredentials = true;
 
       if(state === 'Sign Up'){
-        const {data} = await axios.post(backendUrl + "/api/auth/register", {name, email, password})
+        const {data} = await axios.post('https://auth-app-backend-8aee.onrender.com' + "/api/auth/register", {name, email, password})
         if(data.success){
           setIsLoggedIn(true)
           getUserData()
@@ -33,7 +33,7 @@ const Login = () => {
         }
 
       }else{
-        const {data} = await axios.post(backendUrl + "/api/auth/login", {email, password})
+        const {data} = await axios.post('https://auth-app-backend-8aee.onrender.com' + "/api/auth/login", {email, password})
         if(data.success){
           setIsLoggedIn(true)
           getUserData()
